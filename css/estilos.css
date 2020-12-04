@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yanone+Kaffeesatz');
+{
+box-sizing: border-box;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+body{
+	margin:0; 
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h6{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	letter-spacing: 1.5px;
+}
+
+/*titulo */
+.section__titulo {
+  text-align: center;
+  font-size: 40px;
+  color: green;
+}
+.section__titulo2 {
+  font-size: 40px;
+  color: green;
+}
+.section__titulo3 {
+  font-size: 40px;
+  color: green;
+}
+.contenedor {
+  margin: auto;
+  width: 99%;
+}
+/*Estilos del header*/
+
+.header{
+	height: 60px;
+
+
+}
+.header .contenedor{
+	display: flex;
+	justify-content: space-between;
+}
+.logo, .icon-menu{
+	margin: 5px;
+	color: orange;
+}
+.icon-menu{
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-size:30px;
+	background: #FBA919;
+	text-align: center;
+	line-height: 45px;
+	border-radius: 5px; 
+	margin-left: auto;
+	cursor: pointer;
+}
+/*Estilos del menu*/
+.nav{
+	position: absolute;
+	top: 60px;
+	left: -100%;
+	width: 100%;
+	transition: all 0.4s;
+  background: black;
+
+}
+.menu{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu__link{
+	display: block;
+	padding: 20px;
+	background: black;
+	text-decoration: none;
+	color: green;
+}
+
+// color de letra de la barra
+.menu__link:hover, .select{
+	background: yellow;
+	color: red;
+}
+.mostrar{
+	left: 0;
+}
+
+/*Estilos del banner*/
+
+.banner{
+	margin-top: -60px;
+	position: relative;
+	z-index: -1000;
+	margin-bottom: 30px;
+}
+
+.banner .contenedor{
+   position: absolute;
+   top: 50%;
+   left:50%;
+   transform: translateX(-50%) translateY(-50%);
+   width: 100%;
+   color: black;
+   text-align: center;
+}
+
+.banner__txt{
+display: none;
+}
+
+.banner__img{
+display: block;
+width: 300%;
+
+}
+
+
+/*Estilos de la info*/
+.info__columna{
+
+background: red;
+	color: #fff;
+	padding: 10px;
+	margin-bottom: 30px;
+
+
+}
+
+
+
+/*-----------------Estilos de los destinos-----------------*/
+.destinos__columna {
+  position: relative;
+  margin-bottom: 30px;
+}
+.destinos__descripcion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  width: 60%;
+  height: 100%;
+  padding: 5px;
+}
+.destinos__titulo {
+  font-size: 25px;
+  margin: 5px 0;
+}
+.destinos__img {
+  width: 100%;
+}
+/*-----------------Estilos de footer-----------------*/
+
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer .social [class^="icon-"] {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px;
+  background: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+}
+
+/*------------------Estilos responsive------------------*/
+
+@media(min-width:480px) {
+  .logo {
+    font-size: 40px;
+  }
+  .banner__titulo {
+    font-size: 30px;
+    margin: 5px 0;
+    background: red;
+  }
+  .banner__txt {
+    display: block;
+    font-size: 18px;
+    margin: 7px 0;
+    background: white;
+  }
+  .info, .destinos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -90px;
+  }
+  .info__columna {
+    width: 32%;
+  }
+  .info__titulo {
+    font-size: 30px;
+    margin: 5px 0;
+  }
+  .section__titulo {
+    width: 100%;
+  }
+  .destinos {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+  .destinos__columna {
+    width: 49%;
+  }
+  .video{
+    float: right;
+    
+  }
+  .footer .social [class^="icon-"] {
+    margin: 0 10px;
+  }
+}
+@media(min-width:768px) {  
+  .banner__titulo {
+    font-size: 50px;
+  }
+  .destinos__titulo {
+    font-size: 40px;
+  }
+}
+
+@media(min-width:1024px) {  
+  .contenedor {
+    width: 1000px;
+  }
+   .info__img {
+    width: 300px;
+    height: 250px;
+
+  }
+  .section__titulo {
+    font-size: 50px;
+    margin: 30px 0;
+  }
+  .nav {
+    position: static;
+    width: auto;
+  }
+  .menu {
+    display: flex;
+  }
+  .icon-menu {
+    display: none;
+  }
+  .menu__link {
+    background: none;
+    font-size: 20px;
+  }
+  .select {
+    color: #fff;
+    background: #FBA919;
+  }
+  .banner__titulo {
+    font-size: 60px;
+  }
+  .banner__txt {
+    font-size: 25px;
+  }
+  .info {
+    margin-top: -120px;
+  }
+  .info__columna {
+    padding: 30px;
+  }
+  .info__titulo {
+    font-size: 40px;
+    text-align: center;
+  }
+  .destinos__descripcion {
+    padding: 20px;
+  }
+  .destinos__titulo {
+    font-size: 50px;
+  }
+  .destinos__txt {
+    font-size: 20px;
+  }
+}
+
+@media(min-width:1280px) {
+  .contenedor {
+    width: 1200px;
+  }
+  .logo {
+    font-size: 60px;
+  }
+  .banner .contenedor {
+    top: 40%;
+  }
+  .info {
+    margin-top: -220px;
+  }
+}
